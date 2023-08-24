@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Boleta meses</h1>
+
+<div id="boletas_meses">
+  <% @boletas_meses.each do |boleta_mes| %>
+    <%= render boleta_mes %>
+    <p>
+      <%= link_to "Show this boleta mes", boleta_mes %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New boleta mes", new_boleta_mes_path %>

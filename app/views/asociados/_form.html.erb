@@ -1,0 +1,67 @@
+<%= form_with(model: asociado) do |form| %>
+  <% if asociado.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(asociado.errors.count, "error") %> prohibited this asociado from being saved:</h2>
+
+      <ul>
+        <% asociado.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :direccion, style: "display: block" %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div>
+    <%= form.label :telefono, style: "display: block" %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :rut, style: "display: block" %>
+    <%= form.text_field :rut %>
+  </div>
+
+  <div>
+    <%= form.label :representante, style: "display: block" %>
+    <%= form.text_field :representante %>
+  </div>
+
+  <div>
+    <%= form.label :email_representante, style: "display: block" %>
+    <%= form.text_field :email_representante %>
+  </div>
+
+  <div>
+    <%= form.label :comuna_id, style: "display: block" %>
+    <%= form.text_field :comuna_id %>
+  </div>
+
+  <div>
+    <%= form.label :estado, style: "display: block" %>
+    <%= form.number_field :estado %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_socio_id, style: "display: block" %>
+    <%= form.text_field :tipo_socio_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

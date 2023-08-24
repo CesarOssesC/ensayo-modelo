@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Boletas</h1>
+
+<div id="boletas">
+  <% @boletas.each do |boleta| %>
+    <%= render boleta %>
+    <p>
+      <%= link_to "Show this boleta", boleta %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New boleta", new_boleta_path %>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tipo pagos</h1>
+
+<div id="tipos_pagos">
+  <% @tipos_pagos.each do |tipo_pago| %>
+    <%= render tipo_pago %>
+    <p>
+      <%= link_to "Show this tipo pago", tipo_pago %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tipo pago", new_tipo_pago_path %>

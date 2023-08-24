@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @mes %>
+
+<div>
+  <%= link_to "Edit this mes", edit_mes_path(@mes) %> |
+  <%= link_to "Back to meses", meses_path %>
+
+  <%= button_to "Destroy this mes", @mes, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @boleta %>
+
+<div>
+  <%= link_to "Edit this boleta", edit_boleta_path(@boleta) %> |
+  <%= link_to "Back to boletas", boletas_path %>
+
+  <%= button_to "Destroy this boleta", @boleta, method: :delete %>
+</div>

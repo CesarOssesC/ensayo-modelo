@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @asociado %>
+
+<div>
+  <%= link_to "Edit this asociado", edit_asociado_path(@asociado) %> |
+  <%= link_to "Back to asociados", asociados_path %>
+
+  <%= button_to "Destroy this asociado", @asociado, method: :delete %>
+</div>

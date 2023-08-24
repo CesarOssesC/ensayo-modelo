@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Meses</h1>
+
+<div id="meses">
+  <% @meses.each do |mes| %>
+    <%= render mes %>
+    <p>
+      <%= link_to "Show this mes", mes %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mes", new_mes_path %>

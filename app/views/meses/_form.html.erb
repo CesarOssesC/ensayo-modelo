@@ -1,0 +1,22 @@
+<%= form_with(model: mes) do |form| %>
+  <% if mes.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mes.errors.count, "error") %> prohibited this mes from being saved:</h2>
+
+      <ul>
+        <% mes.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :mes, style: "display: block" %>
+    <%= form.text_field :mes %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

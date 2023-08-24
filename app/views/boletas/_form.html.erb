@@ -1,0 +1,72 @@
+<%= form_with(model: boleta) do |form| %>
+  <% if boleta.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(boleta.errors.count, "error") %> prohibited this boleta from being saved:</h2>
+
+      <ul>
+        <% boleta.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :payer, style: "display: block" %>
+    <%= form.text_field :payer %>
+  </div>
+
+  <div>
+    <%= form.label :flowOrder, style: "display: block" %>
+    <%= form.text_field :flowOrder %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :subject, style: "display: block" %>
+    <%= form.text_field :subject %>
+  </div>
+
+  <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :currency, style: "display: block" %>
+    <%= form.text_field :currency %>
+  </div>
+
+  <div>
+    <%= form.label :media, style: "display: block" %>
+    <%= form.text_field :media %>
+  </div>
+
+  <div>
+    <%= form.label :token, style: "display: block" %>
+    <%= form.text_field :token %>
+  </div>
+
+  <div>
+    <%= form.label :asociado_id, style: "display: block" %>
+    <%= form.text_field :asociado_id %>
+  </div>
+
+  <div>
+    <%= form.label :estado, style: "display: block" %>
+    <%= form.number_field :estado %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_pago_id, style: "display: block" %>
+    <%= form.text_field :tipo_pago_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

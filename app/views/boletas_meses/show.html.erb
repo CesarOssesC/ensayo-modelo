@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @boleta_mes %>
+
+<div>
+  <%= link_to "Edit this boleta mes", edit_boleta_mes_path(@boleta_mes) %> |
+  <%= link_to "Back to boleta meses", boletas_meses_path %>
+
+  <%= button_to "Destroy this boleta mes", @boleta_mes, method: :delete %>
+</div>
